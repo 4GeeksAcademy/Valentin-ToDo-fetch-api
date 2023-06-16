@@ -5,6 +5,7 @@
   }
   
   body {
+    overflow: hidden;
     background-image: url(https://sophie-blitman.fr/wp-content/uploads/2017/04/Post-it-%C2%A9-Flickr-Ignacio-Palomo-Duarte.jpg);
     background-position: center;
     background-repeat: no-repeat;

@@ -55,7 +55,9 @@ const Home = () => {
   };
 
   useEffect(() => {
-    createUser();
+    if (!createUser) {
+      createUser();
+    }
   }, []);
   useEffect(() => {
     getTasksList();
