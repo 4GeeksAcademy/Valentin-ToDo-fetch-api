@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/index.css";
 
 //create your first component
 const Home = () => {
@@ -65,7 +66,6 @@ const Home = () => {
 
   const insertTasks = (e) => {
     if (e.key === "Enter" && inputValue.trim() !== "") {
-      e.preventDefault();
       setTasksList([...tasksList, { label: inputValue, done: false }]);
       setInputValue("");
     }
@@ -76,7 +76,7 @@ const Home = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center main">
       <h1>To Do List</h1>
       <input
         type="text"
@@ -97,6 +97,7 @@ const Home = () => {
             </li>
           ))
         )}
+        <span>{tasksList.length} tasks</span>
       </ul>
     </div>
   );
